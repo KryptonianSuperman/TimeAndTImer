@@ -20,6 +20,7 @@ function CountdownTimer() {
   const [timers, setTimers] = useState<{id: number, startTime: number}[]>();
   const handleStart = () => {
     console.log("inputRef.current",hoursInputRef.current, minutesInputRef.current, secondsInputRef.current)
+    //todo : handle these errors/warnings
     const totalTime = hoursInputRef.current.value * 3600 + minutesInputRef.current.value * 60 + secondsInputRef.current.value;
     if (totalTime > 0) {
       setTimers(prevTimers => {
