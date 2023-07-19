@@ -8,7 +8,6 @@ specifiers:
   axios: ^1.4.0
   eslint: 8.45.0
   eslint-config-next: 13.4.10
-  moment: ^2.29.4
   next: 13.4.10
   postcss: 8.4.26
   react: 18.2.0
@@ -25,7 +24,6 @@ dependencies:
   axios: 1.4.0
   eslint: 8.45.0
   eslint-config-next: 13.4.10_ko3fmmbeyij36muomfgt2u76xu
-  moment: 2.29.4
   next: 13.4.10_63tktvor3xwbblcac5shyx4aca
   postcss: 8.4.26
   react: 18.2.0
@@ -1852,10 +1850,6 @@ packages:
 
   /minimist/1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
-    dev: false
-
-  /moment/2.29.4:
-    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: false
 
   /ms/2.1.2:

@@ -1,24 +1,24 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import moment from "moment";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const WorldClock = () => {
-  const [timeZone, setTimeZone] = useState("America/Los_Angeles");
-  const [currentTime, setCurrentTime] = useState(moment().format("LLLL"));
+  const [timeZone, setTimeZone] = useState('America/Los_Angeles');
+  const [currentTime, setCurrentTime] = useState('');
 
   useEffect(() => {
     // Function to fetch current time from the cloud API
     const fetchTime = async () => {
       try {
-        const response = await axios.get(
-          `http://worldtimeapi.org/api/timezone/${timeZone}`
-        );
-        const { datetime } = response.data;
-        setCurrentTime(moment(datetime).format("LLLL"));
+        const response = await axios.get(`http://worldtimeapi.org/api/timezone/${timeZone}`);
+        const { utc_datetime } = response.data;
+        const localTime = new Date(utc_datetime).toLocaleString('en-US', {
+          timeZone,
+        });
+        setCurrentTime(localTime);
       } catch (error) {
-        console.error("Error fetching time:", error);
+        console.error('Error fetching time:', error);
       }
     };
 
@@ -47,9 +47,7 @@ const WorldClock = () => {
         </select>
       </div>
       <div>
-        <p>
-          Current Time in {timeZone}: {currentTime}
-        </p>
+        <p>Current Time in {timeZone}: {currentTime}</p>
       </div>
     </div>
   );
