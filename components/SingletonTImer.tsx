@@ -24,7 +24,7 @@ export default function SingletonTimer({ id, startTime, onRemove }: {id: number,
       }
     }, [timeRemaining, id, onRemove]);
   
-    const formatTime = time => {
+    const formatTime = (time: number) => {
       const hours = Math.floor(time / 3600);
       const minutes = Math.floor((time % 3600) / 60);
       const seconds = time % 60;

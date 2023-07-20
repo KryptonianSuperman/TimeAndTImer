@@ -14,7 +14,6 @@ const ScrollableInput: ScrollableInputType = ({items}, ref) =>  {
   const valueOfNextnumber = items[nextElementIndex]
   const handleSwipe = (e:  WheelEvent<HTMLDivElement>) => {
     const deltaY = e.deltaY;
-    debugger
     if (deltaY > 0) {
       setSelectedItem((prevSelectedItem) =>
       (((prevSelectedItem + 1) % items.length ) + items.length) % items.length 
